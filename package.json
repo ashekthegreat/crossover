@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "crossover",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "0.0.1",
+  "description": "A crosover test project with AngularJS",
+  "repository": "https://github.com/ashekthegreat/crossover",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
