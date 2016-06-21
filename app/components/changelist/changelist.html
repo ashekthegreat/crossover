@@ -1,1 +1,41 @@
-<p>This is the partial for changelist.</p>
+<div class="table">
+    <div class="thead">
+        <div class="row">
+            <div class="columns">
+                <div class="x2">Changelist / Build</div>
+                <div>Owner</div>
+                <div class="x2">Time Started</div>
+                <div>State</div>
+                <div>Metrics</div>
+                <div>Build</div>
+                <div>Unit Test</div>
+                <div>Functional Test</div>
+            </div>
+        </div>
+    </div>
+    <div class="tbody">
+        <div class="row"
+             ng-repeat="item in changelist"
+             ng-click="expandItem(item)"
+             ng-class="{'success': item.state == 'Accepted' || item.state == 'Complete', 'info': item.state == 'Running', 'danger': item.state == 'Rejected', 'expandable': isExpandable(item), 'expanded': active == item.id}">
+            <div class="columns">
+                <div class="x2">
+                    <img class="log-icon" ng-src="assets/images/{{item.type}}.png">
+                    {{item.title}}
+                </div>
+                <div>{{item.owner}}</div>
+                <div class="x2">{{item.started}}</div>
+                <div>{{item.state}}</div>
+                <div>{{item.metrics.value}}</div>
+                <div>{{item.build.value}}</div>
+                <div>{{item.unitTest.value}}</div>
+                <div>{{item.functionalTest.value}}</div>
+            </div>
+            <div class="details">
+                adas
+                <div google-chart chart="myChartObject" style="height:150px; width:150px;"></div>
+                asdas
+            </div>
+        </div>
+    </div>
+</div>

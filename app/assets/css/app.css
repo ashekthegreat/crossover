@@ -1,4 +1,122 @@
-/* line 1, ../scss/app.scss */
+/* line 1, ../scss/_default.scss */
 body {
-  color: red;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: #000;
+  margin: 0;
+  overflow-y: auto;
+  min-width: 767px;
+  min-height: 100vh;
+  background: #fcfcfc;
+  font-family: Frutiger, 'Roboto Condensed', sans-serif, arial;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+/* line 16, ../scss/_default.scss */
+h1 {
+  color: #ee6e73;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 1.78rem 0 1.424rem 0;
+}
+
+/* line 1, ../scss/_table.scss */
+.table {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 0;
+  font-size: 15px;
+  color: #595959;
+  line-height: 1.5;
+}
+/* line 10, ../scss/_table.scss */
+.table .row {
+  display: flex;
+  flex-flow: column nowrap;
+  background: #e1e1e1;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  position: relative;
+}
+/* line 18, ../scss/_table.scss */
+.table .row .columns {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+/* line 25, ../scss/_table.scss */
+.table .row .columns > div {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 15px;
+}
+/* line 32, ../scss/_table.scss */
+.table .row .columns > div.x2 {
+  flex-grow: 2;
+}
+/* line 35, ../scss/_table.scss */
+.table .row .columns > div.x3 {
+  flex-grow: 3;
+}
+/* line 39, ../scss/_table.scss */
+.table .row a {
+  color: #595959;
+  font-weight: bold;
+}
+/* line 43, ../scss/_table.scss */
+.table .row .td-actions {
+  flex: 0 0 150px;
+}
+/* line 46, ../scss/_table.scss */
+.table .row .details {
+  overflow: hidden;
+  height: 0;
+  transition: .3s height ease-in;
+}
+/* line 51, ../scss/_table.scss */
+.table .row.expandable {
+  cursor: pointer;
+}
+/* line 58, ../scss/_table.scss */
+.table .row.expanded .details {
+  height: auto;
+}
+/* line 64, ../scss/_table.scss */
+.table .thead .row {
+  background: transparent;
+  color: #b9b9b9;
+}
+/* line 70, ../scss/_table.scss */
+.table .tbody .row {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 73, ../scss/_table.scss */
+.table .tbody .row.success {
+  background: #dff0d8;
+}
+/* line 76, ../scss/_table.scss */
+.table .tbody .row.warning {
+  background: #fcf8e3;
+}
+/* line 79, ../scss/_table.scss */
+.table .tbody .row.danger {
+  background: #f2dede;
+}
+/* line 82, ../scss/_table.scss */
+.table .tbody .row.info {
+  background: #d9edf7;
+}
+
+/* line 4, ../scss/app.scss */
+.log-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
 }
