@@ -16,7 +16,7 @@ angular.module('myApp')
         $scope.isExpandable = function (item) {
             return ((item.metrics.value + item.build.value + item.unitTest.value + item.functionalTest.value) == 400);
         };
-        
+
         $scope.expandItem = function (item) {
             if ($scope.active == item.id) {
                 // it's already expanded. Lets collapse it

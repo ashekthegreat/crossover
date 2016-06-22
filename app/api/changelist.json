@@ -58,23 +58,21 @@
         "metrics": {
             "value": 100,
             "state": "Rejected",
-            "items": {
-                "test": {
-                    "value": 64,
-                    "direction": "up"
-                },
-                "maintainability": {
-                    "value": 53,
-                    "direction": "down"
-                },
-                "security": {
-                    "value": 64,
-                    "direction": "right"
-                },
-                "workmanship": {
-                    "value": 72,
-                    "direction": "right"
-                }
+            "test": {
+                "value": 64,
+                "direction": "up"
+            },
+            "maintainability": {
+                "value": 53,
+                "direction": "down"
+            },
+            "security": {
+                "value": 64,
+                "direction": "right"
+            },
+            "workmanship": {
+                "value": 72,
+                "direction": "right"
             }
         },
         "build": {
@@ -108,23 +106,21 @@
         "metrics": {
             "value": 100,
             "state": "Accepted",
-            "items": {
-                "test": {
-                    "value": 64,
-                    "direction": "up"
-                },
-                "maintainability": {
-                    "value": 53,
-                    "direction": "up"
-                },
-                "security": {
-                    "value": 64,
-                    "direction": "right"
-                },
-                "workmanship": {
-                    "value": 72,
-                    "direction": "right"
-                }
+            "test": {
+                "value": 64,
+                "direction": "up"
+            },
+            "maintainability": {
+                "value": 53,
+                "direction": "up"
+            },
+            "security": {
+                "value": 64,
+                "direction": "right"
+            },
+            "workmanship": {
+                "value": 72,
+                "direction": "right"
             }
         },
         "build": {
@@ -182,23 +178,21 @@
         "metrics": {
             "value": 100,
             "state": "Accepted",
-            "items": {
-                "test": {
-                    "value": 64,
-                    "direction": "up"
-                },
-                "maintainability": {
-                    "value": 53,
-                    "direction": "up"
-                },
-                "security": {
-                    "value": 64,
-                    "direction": "right"
-                },
-                "workmanship": {
-                    "value": 72,
-                    "direction": "right"
-                }
+            "test": {
+                "value": 64,
+                "direction": "up"
+            },
+            "maintainability": {
+                "value": 53,
+                "direction": "up"
+            },
+            "security": {
+                "value": 64,
+                "direction": "right"
+            },
+            "workmanship": {
+                "value": 72,
+                "direction": "right"
             }
         },
         "build": {

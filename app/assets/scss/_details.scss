@@ -1,0 +1,109 @@
+.details {
+    overflow: hidden;
+    max-height: 0;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+    .details-content {
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+
+        .details-item{
+            /*display: flex;*/
+            flex-grow: 1;
+            flex-basis: 0;
+            margin: 10px;
+            padding: 10px;
+
+            h4{
+                margin-top: 0;
+                display: block;
+                width: 100%;
+            }
+
+            &.success{
+                border: 2px solid #5cb85c;
+            }
+            &.danger{
+                border: 2px solid #d9534f;
+            }
+        }
+        a.details-item, a.details-item:hover, a.details-item:focus, a.details-item:active{
+            text-decoration: none;
+        }
+        a.details-item:hover{
+            box-shadow: 0 0 10px rgba(50,50,50,.75);
+        }
+        .details-build, .details-unit-test, .details-functional-test{
+            li{
+                display: inline-block;
+                text-align: center;
+                width: 48%;
+                vertical-align: middle;
+
+                strong{
+                    font-size: 2.5em;
+                    display: block;
+                    line-height: 1.2em;
+                }
+                small{
+                    font-size: 0.8em;
+                    display: block;
+                    line-height: 1.4em;
+                }
+                img{
+                    max-width: 90%;
+                }
+            }
+        }
+        .details-result{
+            strong{
+                font-size: 2em;
+                margin-bottom: 20px;
+                display: block;
+                line-height: 1em;
+            }
+            .btn{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.expanded .details {
+    max-height: 250px;
+}
+
+@media (max-width: 767px) {
+    .details {
+        .details-content {
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .details-item{
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 45%;
+            }
+        }
+    }
+    .expanded .details {
+        max-height: 2000px;
+    }
+}
+
+@media (max-width: 420px) {
+    .details {
+        .details-content {
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .details-item{
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+            }
+        }
+    }
+}

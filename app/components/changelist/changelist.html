@@ -1,6 +1,6 @@
 <div class="table">
-    <div class="thead">
-        <div class="row">
+    <div class="thead hidden-xs">
+        <div class="tr">
             <div class="columns">
                 <div class="x2">Changelist / Build</div>
                 <div>Owner</div>
@@ -14,28 +14,37 @@
         </div>
     </div>
     <div class="tbody">
-        <div class="row"
+        <div class="tr"
              ng-repeat="item in changelist"
              ng-class="{'success': item.state == 'Accepted' || item.state == 'Complete', 'info': item.state == 'Running', 'danger': item.state == 'Rejected', 'expandable': isExpandable(item), 'expanded': active == item.id}">
             <div class="columns" ng-click="expandItem(item)">
-                <div class="x2">
+                <div class="x2 break">
                     <img class="log-icon" ng-src="assets/images/{{item.type}}.png">
                     {{item.title}}
                 </div>
-                <div>{{item.owner}}</div>
-                <div class="x2">{{item.started}}</div>
-                <div>{{item.state}}</div>
-                <div>
-                    <div progress part="item.metrics" ng-hide="active == item.id"></div>
+                <div class="break">
+                    <strong class="visible-xs">Owner: &nbsp;</strong>
+                    {{item.owner}}
+                </div>
+                <div class="x2 break">
+                    <strong class="visible-xs">Time Started: &nbsp;</strong>
+                    {{item.started}}
+                </div>
+                <div class="break">
+                    <strong class="visible-xs">State: &nbsp;</strong>
+                    {{item.state}}
                 </div>
                 <div>
-                    <div progress part="item.build" ng-hide="active == item.id"></div>
+                    <div progress part="item.metrics"></div>
                 </div>
                 <div>
-                    <div progress part="item.unitTest" ng-hide="active == item.id"></div>
+                    <div progress part="item.build"></div>
                 </div>
                 <div>
-                    <div progress part="item.functionalTest" ng-hide="active == item.id"></div>
+                    <div progress part="item.unitTest"></div>
+                </div>
+                <div>
+                    <div progress part="item.functionalTest"></div>
                 </div>
             </div>
             <div class="details">
@@ -45,20 +54,20 @@
                         <h4>Metrics</h4>
                         <ul class="list-unstyled">
                             <li>
-                                <strong>Test: </strong> {{item.metrics.items.test.value}}
-                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.test.direction}}"></i>
+                                <strong>Test: </strong> {{item.metrics.test.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.test.direction}}"></i>
                             </li>
                             <li>
-                                <strong>Maintainability: </strong> {{item.metrics.items.maintainability.value}}
-                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.maintainability.direction}}"></i>
+                                <strong>Maintainability: </strong> {{item.metrics.maintainability.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.maintainability.direction}}"></i>
                             </li>
                             <li>
-                                <strong>Security: </strong> {{item.metrics.items.security.value}}
-                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.security.direction}}"></i>
+                                <strong>Security: </strong> {{item.metrics.security.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.security.direction}}"></i>
                             </li>
                             <li>
-                                <strong>Workmanship: </strong> {{item.metrics.items.workmanship.value}}
-                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.workmanship.direction}}"></i>
+                                <strong>Workmanship: </strong> {{item.metrics.workmanship.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.workmanship.direction}}"></i>
                             </li>
                         </ul>
                     </a>
