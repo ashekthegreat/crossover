@@ -27,42 +27,4 @@ angular.module('myApp')
         };
 
         $scope.loadData();
-
-        $scope.myChartObject = {};
-        $scope.myChartObject.type = "PieChart";
-        $scope.myChartObject.data = {
-            "cols": [
-                {id: "t", label: "Topping", type: "string"},
-                {id: "s", label: "Slices", type: "number"}
-            ], "rows": [
-                {
-                    c: [
-                        {v: "Olives"},
-                        {v: 31}
-                    ]
-                },
-                {
-                    c: [
-                        {v: "Zucchini"},
-                        {v: 18}
-                    ]
-                },
-                {
-                    c: [
-                        {v: "Pepperoni"},
-                        {v: 20}
-                    ]
-                }
-            ]
-        };
-        $scope.myChartObject.options = {
-            legend: 'none',
-            enableInteractivity: false,
-            backgroundColor: 'transparent',
-            chartArea: {
-                left: 0, top: 0, width: '100%', height: '100%'
-            },
-            slices: [{color: 'black'}, {}, {color: 'red'}]
-        }
-
     }]);
