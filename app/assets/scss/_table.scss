@@ -38,7 +38,7 @@
         }
         a {
             color: #595959;
-            font-weight: bold;
+            /*font-weight: bold;*/
         }
         .td-actions {
             flex: 0 0 150px;
@@ -58,14 +58,27 @@
                     flex-grow: 1;
                     flex-basis: 0;
                     margin: 10px;
-                    padding: 5px;
-                    border: 2px solid #2b542c;
+                    padding: 10px;
+
 
                     h4{
                         margin-top: 0;
                         display: block;
                         width: 100%;
                     }
+
+                    &.success{
+                        border: 2px solid #5cb85c;
+                    }
+                    &.danger{
+                        border: 2px solid #d9534f;
+                    }
+                }
+                a.details-item, a.details-item:hover, a.details-item:focus, a.details-item:active{
+                    text-decoration: none;
+                }
+                a.details-item:hover{
+                    box-shadow: 0 0 10px rgba(50,50,50,.75);
                 }
                 .details-build, .details-unit-test, .details-functional-test{
                     li{
@@ -89,36 +102,15 @@
                         }
                     }
                 }
-                .chart{
-                    width: 100%;
-                    height: 100px;
-                }
-                .test-progress{
-                    background: rgba(240, 173, 78, 0.5);
-                    position: relative;
-
-                    .test-progress-bar{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 0;
-                        bottom: 0;
-                        background: rgba(92, 184, 92, 0.5);
+                .details-result{
+                    strong{
+                        font-size: 2em;
+                        margin-bottom: 10px;
+                        display: block;
+                        line-height: 1em;
                     }
-                    .test-progress-text{
-                        text-align: center;
-                        position: relative;
-
-                        strong{
-                            font-size: 1.5em;
-                            display: block;
-                            line-height: 1.2em;
-                        }
-                        small{
-                            font-size: 0.8em;
-                            display: block;
-                            line-height: 1.4em;
-                        }
+                    .btn{
+                        margin-bottom: 10px;
                     }
                 }
             }

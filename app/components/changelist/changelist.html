@@ -16,9 +16,8 @@
     <div class="tbody">
         <div class="row"
              ng-repeat="item in changelist"
-             ng-click="expandItem(item)"
              ng-class="{'success': item.state == 'Accepted' || item.state == 'Complete', 'info': item.state == 'Running', 'danger': item.state == 'Rejected', 'expandable': isExpandable(item), 'expanded': active == item.id}">
-            <div class="columns">
+            <div class="columns" ng-click="expandItem(item)">
                 <div class="x2">
                     <img class="log-icon" ng-src="assets/images/{{item.type}}.png">
                     {{item.title}}
@@ -41,7 +40,8 @@
             </div>
             <div class="details">
                 <div class="details-content">
-                    <div class="details-item details-metrics">
+                    <a href="javascript:;" class="details-item details-metrics"
+                       ng-class="{'success': item.metrics.state == 'Accepted' || item.metrics.state == 'Complete', 'danger': item.metrics.state == 'Rejected'}">
                         <h4>Metrics</h4>
                         <ul class="list-unstyled">
                             <li>
@@ -61,8 +61,9 @@
                                 <i class="glyphicon glyphicon-arrow-{{item.metrics.items.workmanship.direction}}"></i>
                             </li>
                         </ul>
-                    </div>
-                    <div class="details-item details-build">
+                    </a>
+                    <a href="javascript:;" class="details-item details-build"
+                       ng-class="{'success': item.build.state == 'Accepted' || item.build.state == 'Complete', 'danger': item.build.state == 'Rejected'}">
                         <h4>Build</h4>
                         <ul class="list-unstyled">
                             <li ng-repeat="machine in item.build.items">
@@ -70,46 +71,42 @@
                             </li>
                         </ul>
                         <p class="text-center">{{item.build.when}}</p>
-                    </div>
-                    <div class="details-item details-unit-test">
+                    </a>
+                    <a href="javascript:;" class="details-item details-unit-test"
+                       ng-class="{'success': item.unitTest.state == 'Accepted' || item.unitTest.state == 'Complete', 'danger': item.unitTest.state == 'Rejected'}">
                         <h4>Unit Test</h4>
-                        <ul class="list-unstyled">
-                            <li>
-                                <div google-chart chart="myChartObject" class="chart"></div>
-                            </li>
-                            <li>
-                                <strong>73%</strong> <small>test passed</small>
-                            </li>
-                        </ul>
-                        <div class="test-progress">
-                            <div class="test-progress-bar" ng-style="{'width':(item.unitTest.codeCoveragePercent) + '%'}"></div>
-                            <div class="test-progress-text">
-                                <strong>{{item.unitTest.codeCoveragePercent}} %</strong>
-                                <small>code covered</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details-item details-functional-test">
+                        <div test-result test="item.unitTest"></div>
+                    </a>
+                    <a href="javascript:;" class="details-item details-functional-test"
+                       ng-class="{'success': item.functionalTest.state == 'Accepted' || item.functionalTest.state == 'Complete', 'danger': item.functionalTest.state == 'Rejected'}">
                         <h4>Functional Test</h4>
-                        <ul class="list-unstyled">
-                            <li>
-                                <div google-chart chart="myChartObject" class="chart"></div>
-                            </li>
-                            <li>
-                                <strong>73%</strong> <small>test passed</small>
-                            </li>
-                        </ul>
-                        <div class="test-progress">
-                            <div class="test-progress-bar" ng-style="{'width':(item.functionalTest.codeCoveragePercent) + '%'}"></div>
-                            <div class="test-progress-text">
-                                <strong>{{item.functionalTest.codeCoveragePercent}} %</strong>
-                                <small>code covered</small>
-                            </div>
+                        <div test-result test="item.functionalTest"></div>
+                    </a>
+                    <div class="details-item details-result">
+                        <h4 class="text-center">Result</h4>
+                        <div ng-if="item.state=='Rejected'" class="text-danger text-center">
+                            <div>Change Rejected</div>
+                            <strong>{{item.reason}}</strong>
+                            <button class="btn btn-primary">Find Issues</button>
+                        </div>
+                        <div ng-if="item.state=='Accepted'" class="text-warning text-center">
+                            <div>Change Accepted</div>
+                            <strong>Auto Merged</strong>
+                            <button class="btn btn-primary">Merged Build</button>
+                        </div>
+                        <div ng-if="item.state=='Complete'" class="text-success text-center">
+                            <strong>Complete</strong>
+                            <button class="btn btn-primary">Deploy</button> to:
+                            <select>
+                                <option>Production</option>
+                                <option>Staging</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="details-item">a</div>
+
                 </div>
                 <!--<div google-chart chart="myChartObject" style="height:150px; width:150px;"></div>-->
+                <!--<div pie-chart passed="item.unitTest.passed" failed="item.unitTest.failed"></div>-->
             </div>
         </div>
     </div>

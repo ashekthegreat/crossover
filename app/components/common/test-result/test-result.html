@@ -1,0 +1,17 @@
+<div class="test-result">
+    <ul class="list-unstyled">
+        <li>
+            <div google-chart chart="myChartObject" class="chart"></div>
+        </li>
+        <li>
+            <strong>{{passedPercent | number : 0}}%</strong> <small>test passed</small>
+        </li>
+    </ul>
+    <div class="test-progress">
+        <div class="test-progress-bar" ng-style="{'width':(test.codeCoveragePercent) + '%'}"></div>
+        <div class="test-progress-text">
+            <strong>{{test.codeCoveragePercent | number : fractionSize}} %</strong>
+            <small>code covered</small>
+        </div>
+    </div>
+</div>

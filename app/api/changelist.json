@@ -54,6 +54,7 @@
         "owner": "samy",
         "started": "4/18/2014 10:53am",
         "state": "Rejected",
+        "reason": "Metrics Reduction",
         "metrics": {
             "value": 100,
             "state": "Rejected",

@@ -61,7 +61,8 @@ angular.module('myApp')
             backgroundColor: 'transparent',
             chartArea: {
                 left: 0, top: 0, width: '100%', height: '100%'
-            }
+            },
+            slices: [{color: 'black'}, {}, {color: 'red'}]
         }
 
     }]);
