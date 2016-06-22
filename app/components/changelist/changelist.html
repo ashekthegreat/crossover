@@ -26,15 +26,90 @@
                 <div>{{item.owner}}</div>
                 <div class="x2">{{item.started}}</div>
                 <div>{{item.state}}</div>
-                <div>{{item.metrics.value}}</div>
-                <div>{{item.build.value}}</div>
-                <div>{{item.unitTest.value}}</div>
-                <div>{{item.functionalTest.value}}</div>
+                <div>
+                    <div progress part="item.metrics" ng-hide="active == item.id"></div>
+                </div>
+                <div>
+                    <div progress part="item.build" ng-hide="active == item.id"></div>
+                </div>
+                <div>
+                    <div progress part="item.unitTest" ng-hide="active == item.id"></div>
+                </div>
+                <div>
+                    <div progress part="item.functionalTest" ng-hide="active == item.id"></div>
+                </div>
             </div>
             <div class="details">
-                adas
-                <div google-chart chart="myChartObject" style="height:150px; width:150px;"></div>
-                asdas
+                <div class="details-content">
+                    <div class="details-item details-metrics">
+                        <h4>Metrics</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <strong>Test: </strong> {{item.metrics.items.test.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.test.direction}}"></i>
+                            </li>
+                            <li>
+                                <strong>Maintainability: </strong> {{item.metrics.items.maintainability.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.maintainability.direction}}"></i>
+                            </li>
+                            <li>
+                                <strong>Security: </strong> {{item.metrics.items.security.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.security.direction}}"></i>
+                            </li>
+                            <li>
+                                <strong>Workmanship: </strong> {{item.metrics.items.workmanship.value}}
+                                <i class="glyphicon glyphicon-arrow-{{item.metrics.items.workmanship.direction}}"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="details-item details-build">
+                        <h4>Build</h4>
+                        <ul class="list-unstyled">
+                            <li ng-repeat="machine in item.build.items">
+                                <img src="assets/images/computer.png"> {{machine}}
+                            </li>
+                        </ul>
+                        <p class="text-center">{{item.build.when}}</p>
+                    </div>
+                    <div class="details-item details-unit-test">
+                        <h4>Unit Test</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <div google-chart chart="myChartObject" class="chart"></div>
+                            </li>
+                            <li>
+                                <strong>73%</strong> <small>test passed</small>
+                            </li>
+                        </ul>
+                        <div class="test-progress">
+                            <div class="test-progress-bar" ng-style="{'width':(item.unitTest.codeCoveragePercent) + '%'}"></div>
+                            <div class="test-progress-text">
+                                <strong>{{item.unitTest.codeCoveragePercent}} %</strong>
+                                <small>code covered</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-item details-functional-test">
+                        <h4>Functional Test</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <div google-chart chart="myChartObject" class="chart"></div>
+                            </li>
+                            <li>
+                                <strong>73%</strong> <small>test passed</small>
+                            </li>
+                        </ul>
+                        <div class="test-progress">
+                            <div class="test-progress-bar" ng-style="{'width':(item.functionalTest.codeCoveragePercent) + '%'}"></div>
+                            <div class="test-progress-text">
+                                <strong>{{item.functionalTest.codeCoveragePercent}} %</strong>
+                                <small>code covered</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-item">a</div>
+                </div>
+                <!--<div google-chart chart="myChartObject" style="height:150px; width:150px;"></div>-->
             </div>
         </div>
     </div>

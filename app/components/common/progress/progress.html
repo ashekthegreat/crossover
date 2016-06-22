@@ -1,0 +1,8 @@
+<div class="progress">
+    <div class="progress-bar"
+         ng-class="{'progress-bar-success': part.state == 'Accepted', 'progress-bar-danger': part.state == 'Rejected', 'progress-bar-info': part.state == 'Running'}"
+         role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+         ng-style="{'width':(part.value) + '%'}">
+        <span class="sr-only">{{part.value}}% Complete</span>
+    </div>
+</div>

@@ -1,138 +1,224 @@
 [
-  {
-    "id": 1,
-    "type": "build",
-    "title": "Tenrox-R1_1235",
-    "owner": "",
-    "started": "",
-    "state": "Pending",
-    "metrics": {
-      "value": 0
+    {
+        "id": 1,
+        "type": "build",
+        "title": "Tenrox-R1_1235",
+        "owner": "",
+        "started": "",
+        "state": "Pending",
+        "metrics": {
+            "value": 0,
+            "state": "Pending"
+        },
+        "build": {
+            "value": 0,
+            "state": "Pending"
+        },
+        "unitTest": {
+            "value": 0,
+            "state": "Pending"
+        },
+        "functionalTest": {
+            "value": 0,
+            "state": "Pending"
+        }
     },
-    "build": {
-      "value": 0
+    {
+        "id": 2,
+        "type": "firewall",
+        "title": "432462",
+        "owner": "jtuck",
+        "started": "4/18/2014 12:12pm",
+        "state": "Running",
+        "metrics": {
+            "value": 60,
+            "state": "Running"
+        },
+        "build": {
+            "value": 0,
+            "state": "Pending"
+        },
+        "unitTest": {
+            "value": 0,
+            "state": "Pending"
+        },
+        "functionalTest": {
+            "value": 0,
+            "state": "Pending"
+        }
     },
-    "unitTest": {
-      "value": 0
+    {
+        "id": 3,
+        "type": "firewall",
+        "title": "432461",
+        "owner": "samy",
+        "started": "4/18/2014 10:53am",
+        "state": "Rejected",
+        "metrics": {
+            "value": 100,
+            "state": "Rejected",
+            "items": {
+                "test": {
+                    "value": 64,
+                    "direction": "up"
+                },
+                "maintainability": {
+                    "value": 53,
+                    "direction": "down"
+                },
+                "security": {
+                    "value": 64,
+                    "direction": "right"
+                },
+                "workmanship": {
+                    "value": 72,
+                    "direction": "right"
+                }
+            }
+        },
+        "build": {
+            "value": 100,
+            "state": "Accepted",
+            "items": ["Debug", "Release"],
+            "when": "4/19/2014 10:53am"
+        },
+        "unitTest": {
+            "value": 100,
+            "state": "Accepted",
+            "passed": 142,
+            "failed": 10,
+            "codeCoveragePercent": 76
+        },
+        "functionalTest": {
+            "value": 100,
+            "state": "Accepted",
+            "passed": 4321,
+            "failed": 2145,
+            "codeCoveragePercent": 23
+        }
     },
-    "functionalTest": {
-      "value": 0
+    {
+        "id": 4,
+        "type": "build",
+        "title": "Tenrox-R1_1235",
+        "owner": "",
+        "started": "4/17/2014 9:42am",
+        "state": "Complete",
+        "metrics": {
+            "value": 100,
+            "state": "Accepted",
+            "items": {
+                "test": {
+                    "value": 64,
+                    "direction": "up"
+                },
+                "maintainability": {
+                    "value": 53,
+                    "direction": "up"
+                },
+                "security": {
+                    "value": 64,
+                    "direction": "right"
+                },
+                "workmanship": {
+                    "value": 72,
+                    "direction": "right"
+                }
+            }
+        },
+        "build": {
+            "value": 100,
+            "state": "Accepted",
+            "items": ["Debug", "Release"],
+            "when": "4/18/2014 9:42am"
+        },
+        "unitTest": {
+            "value": 100,
+            "state": "Accepted",
+            "passed": 142,
+            "failed": 10,
+            "codeCoveragePercent": 76
+        },
+        "functionalTest": {
+            "value": 100,
+            "state": "Accepted",
+            "passed": 4321,
+            "failed": 2145,
+            "codeCoveragePercent": 23
+        }
+    },
+    {
+        "id": 5,
+        "type": "firewall",
+        "title": "432460",
+        "owner": "samy",
+        "started": "4/17/2014 7:51am",
+        "state": "Rejected",
+        "metrics": {
+            "value": 100,
+            "state": "Rejected"
+        },
+        "build": {
+            "value": 0,
+            "state": "Pending"
+        },
+        "unitTest": {
+            "value": 0,
+            "state": "Pending"
+        },
+        "functionalTest": {
+            "value": 0,
+            "state": "Pending"
+        }
+    },
+    {
+        "id": 6,
+        "type": "firewall",
+        "title": "432459",
+        "owner": "samy",
+        "started": "4/16/2014 6:43am",
+        "state": "Accepted",
+        "metrics": {
+            "value": 100,
+            "state": "Accepted",
+            "items": {
+                "test": {
+                    "value": 64,
+                    "direction": "up"
+                },
+                "maintainability": {
+                    "value": 53,
+                    "direction": "up"
+                },
+                "security": {
+                    "value": 64,
+                    "direction": "right"
+                },
+                "workmanship": {
+                    "value": 72,
+                    "direction": "right"
+                }
+            }
+        },
+        "build": {
+            "value": 100,
+            "state": "Accepted",
+            "items": ["Debug", "Release"],
+            "when": "4/17/2014 6:43am"
+        },
+        "unitTest": {
+            "value": 100,
+            "state": "Accepted",
+            "passed": 142,
+            "failed": 10,
+            "codeCoveragePercent": 76
+        },
+        "functionalTest": {
+            "value": 100,
+            "state": "Accepted",
+            "passed": 4321,
+            "failed": 2145,
+            "codeCoveragePercent": 23
+        }
     }
-  },
-  {
-    "id": 2,
-    "type": "firewall",
-    "title": "432462",
-    "owner": "jtuck",
-    "started": "4/18/2014 12:12pm",
-    "state": "Running",
-    "metrics": {
-      "value": 60
-    },
-    "build": {
-      "value": 0
-    },
-    "unitTest": {
-      "value": 0
-    },
-    "functionalTest": {
-      "value": 0
-    }
-  },
-  {
-    "id": 3,
-    "type": "firewall",
-    "title": "432461",
-    "owner": "samy",
-    "started": "4/18/2014 10:53am",
-    "state": "Rejected",
-    "metrics": {
-      "value": 100,
-      "state": "Rejected"
-    },
-    "build": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "unitTest": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "functionalTest": {
-      "value": 100,
-      "state": "Accepted"
-    }
-  },
-  {
-    "id": 4,
-    "type": "build",
-    "title": "Tenrox-R1_1235",
-    "owner": "",
-    "started": "4/17/2014 9:42am",
-    "state": "Complete",
-    "metrics": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "build": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "unitTest": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "functionalTest": {
-      "value": 100,
-      "state": "Accepted"
-    }
-  },
-  {
-    "id": 5,
-    "type": "firewall",
-    "title": "432460",
-    "owner": "samy",
-    "started": "4/17/2014 7:51am",
-    "state": "Rejected",
-    "metrics": {
-      "value": 100,
-      "state": "Rejected"
-    },
-    "build": {
-      "value": 0,
-      "state": "Pending"
-    },
-    "unitTest": {
-      "value": 0,
-      "state": "Pending"
-    },
-    "functionalTest": {
-      "value": 0,
-      "state": "Pending"
-    }
-  },
-  {
-    "id": 6,
-    "type": "firewall",
-    "title": "432459",
-    "owner": "samy",
-    "started": "4/16/2014 6:43am",
-    "state": "Accepted",
-    "metrics": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "build": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "unitTest": {
-      "value": 100,
-      "state": "Accepted"
-    },
-    "functionalTest": {
-      "value": 100,
-      "state": "Accepted"
-    }
-  }
 ]
