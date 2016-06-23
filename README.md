@@ -33,13 +33,13 @@ cd crossover
 
 ### Install Dependencies
 
-We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
+I have two kinds of dependencies in this project: tools and angular framework code.  The tools help
 us manage and test the application.
 
-* We get the tools we depend upon via `npm`, the [node package manager][npm].
-* We get the angular code via `bower`, a [client-side code package manager][bower].
+* I get the tools I depend upon via `npm`, the [node package manager][npm].
+* I get the angular code via `bower`, a [client-side code package manager][bower].
 
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
+I have preconfigured `npm` to automatically run `bower` so I can simply do:
 
 ```
 npm install
@@ -48,7 +48,7 @@ npm install
 Behind the scenes this will also call `bower install`.  You should find that you have two new
 folders in your project.
 
-* `node_modules` - contains the npm packages for the tools we need
+* `node_modules` - contains the npm packages for the tools I need
 * `app/bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
@@ -57,7 +57,7 @@ it easier to serve the files by a webserver.*
 
 ### Run the Application
 
-We have preconfigured the project with a simple development web server.  The simplest way to start
+I have preconfigured the project with a simple development web server.  The simplest way to start
 this server is:
 
 ```
@@ -74,7 +74,7 @@ There are two kinds of tests in the crossover-test application: Unit tests and e
 ### Running Unit Tests
 
 The crossover-test app comes preconfigured with unit tests. These are written in
-[Jasmine][jasmine], which we run with the [Karma Test Runner][karma]. We provide a Karma
+[Jasmine][jasmine], which I run with the [Karma Test Runner][karma]. I provide a Karma
 configuration file to run them.
 
 * the configuration is found at `karma.conf.js`
